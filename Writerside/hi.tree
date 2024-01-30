@@ -2,9 +2,20 @@
 <!DOCTYPE instance-profile
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
-<instance-profile id="hi"
-                 name="Help Instance"
-                 start-page="Default-topic.md">
+<instance-profile id="hi" name="Help Instance"
+                 start-page="Ad-Astra.md">
 
-    <toc-element topic="Default-topic.md"/>
+    <toc-element topic="Ad-Astra.md"/>
+    <toc-element topic="Custom-Planets.md">
+        <toc-element topic="Resourcepack.md"/>
+        <toc-element topic="Datapack.md"/>
+    </toc-element>
+    <toc-element topic="API.md">
+        <toc-element topic="Events.md"/>
+        <toc-element topic="Planet-API.md"/>
+        <toc-element topic="Oxygen-API.md"/>
+        <toc-element topic="Temperature-API.md"/>
+        <toc-element topic="Gravity-API.md"/>
+    </toc-element>
+    <toc-element topic="Tags.md"/>
 </instance-profile>
