@@ -94,8 +94,8 @@ jobs:
         uses: cloudflare/pages-action@1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: YOUR_ACCOUNT_ID
-          projectName: YOUR_PROJECT_NAME
-          directory: YOUR_ASSET_DIRECTORY
+          accountId: 24c5f441026daba8da2637ed4612d555
+          projectName: ad-astra-docs
+          directory: artifacts
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: '3'
