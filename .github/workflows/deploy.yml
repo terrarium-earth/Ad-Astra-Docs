@@ -87,8 +87,8 @@ jobs:
         with:
           name: docs
 
-      - name: Unzip artifact
-        run: unzip -O UTF-8 -qq ${{ env.ARTIFACT }} -d dir
+      - name: Extract Files
+        run: 7z x artifacts/${{ env.ARTIFACT }} -ocf-pages
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
@@ -98,5 +98,4 @@ jobs:
           projectName: ad-astra-docs
           directory: cf-pages
           branch: main
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: '3'
