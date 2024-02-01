@@ -8,11 +8,6 @@ on:
   # Specify to run a workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 
-# Gives the workflow permissions to clone the repo and create a page deployment
-permissions:
-  id-token: write
-  pages: write
-
 env:
   # Name of module and id separated by a slash
   INSTANCE: Writerside/hi
@@ -87,8 +82,8 @@ jobs:
         with:
           name: docs
 
-      - name: Unzip artifact
-        run: unzip -O UTF-8 -qq ${{ env.ARTIFACT }} -d dir
+      - name: Extract Files
+        run: 7z x artifacts/${{ env.ARTIFACT }} -ocf-pages
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
@@ -96,7 +91,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 24c5f441026daba8da2637ed4612d555
           projectName: ad-astra-docs
-          directory: artifacts/webHelpHI2-all
+          directory: cf-pages
           branch: main
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: '3'
