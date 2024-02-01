@@ -97,5 +97,6 @@ jobs:
           accountId: 24c5f441026daba8da2637ed4612d555
           projectName: ad-astra-docs
           directory: cf-pages
+          branch: main
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: '3'
