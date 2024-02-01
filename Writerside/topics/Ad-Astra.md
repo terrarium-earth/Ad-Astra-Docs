@@ -1,5 +1,7 @@
 # Ad Astra
 
+This is a test to test that the deployment works.
+
 Ad Astra is a Minecraft space tech and exploration mod. Unless otherwise stated, all information on this wiki is for
 Minecraft 1.20.1+ on Ad Astra 1.15.13 and above. If you're looking for older version, check out
 the [legacy wiki](https://github.com/terrarium-earth/Ad-Astra/wiki/Home/51b961bab281bea70cac81bd80e86f1e387ca342).
